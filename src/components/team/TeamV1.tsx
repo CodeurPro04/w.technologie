@@ -22,10 +22,11 @@ const TeamV1 = ({ sectionClass, hasTitle }: DataType) => {
   );
 
   // 🔹 3. DÉVELOPPEUR (1 seul)
-  const developer = TeamV1Data.find(member =>
-    member.designation.toLowerCase().includes("developer") ||
-    member.designation.toLowerCase().includes("développeur")
-  );
+  const developers = TeamV1Data.filter(member =>
+  member.designation.toLowerCase().includes("developer") ||
+  member.designation.toLowerCase().includes("développeur") ||
+  member.designation.toLowerCase().includes("dev")
+);
 
   return (
     <div
@@ -96,7 +97,7 @@ const TeamV1 = ({ sectionClass, hasTitle }: DataType) => {
                     data-bs-toggle="tab"
                     data-bs-target="#tab3"
                   >
-                    <strong>Développeur</strong>
+                    <strong>Développeurs</strong>
                   </button>
                 </li>
               </ul>
@@ -121,13 +122,15 @@ const TeamV1 = ({ sectionClass, hasTitle }: DataType) => {
                   <Swiper
                     slidesPerView={1}
                     spaceBetween={30}
+                    height={null}
                     breakpoints={{
                       768: { slidesPerView: 2, spaceBetween: 60 },
                     }}
                     modules={[Keyboard]}
+                    className="team-swiper-equal-height"
                   >
                     {marketingTeam.map(member => (
-                      <SwiperSlide key={member.id}>
+                      <SwiperSlide key={member.id} className="d-flex">
                         <SingleTeamV1 team={member} />
                       </SwiperSlide>
                     ))}
@@ -136,12 +139,20 @@ const TeamV1 = ({ sectionClass, hasTitle }: DataType) => {
 
                 {/* TAB 3 – DÉVELOPPEUR (1) */}
                 <div className="tab-pane fade" id="tab3">
-                  <Swiper slidesPerView={1} modules={[Keyboard]}>
-                    {developer && (
-                      <SwiperSlide>
-                        <SingleTeamV1 team={developer} />
+                  <Swiper 
+                    slidesPerView={1} 
+                    spaceBetween={30}
+                    breakpoints={{
+                      768: { slidesPerView: developers.length > 1 ? 2 : 1, spaceBetween: 60 },
+                    }}
+                    modules={[Keyboard]}
+                    className="team-swiper-equal-height"
+                  >
+                    {developers.map(member => (
+                      <SwiperSlide key={member.id} className="d-flex">
+                        <SingleTeamV1 team={member} />
                       </SwiperSlide>
-                    )}
+                    ))}
                   </Swiper>
                 </div>
               </div>
