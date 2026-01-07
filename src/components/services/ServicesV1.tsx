@@ -53,15 +53,15 @@ const ServicesV1 = ({ hasTitle, sectionClass }: DataType) => {
 
                 <div className="container">
                     <div className="services-style-one-items">
-                        <div className="row">
+                        <div className="row justify-content-center">
                             {ServicesV1Data.slice(0, 5).map((service) => (
                                 <div
-                                    className="col-xl-4 col-lg-3 col-md-6 single-item d-flex align-items-stretch"
+                                    className="col-xl-4 col-lg-4 col-md-6 single-item"
                                     key={service.id}
                                     onMouseEnter={() => handleMouseEnter(service.id)}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    <div className={`services-style-one-item h-100 d-flex flex-column ${activeServiceId === service.id ? 'active' : ''}`}>
+                                    <div className={`services-style-one-item d-flex flex-column h-100 ${activeServiceId === service.id ? 'active' : ''}`}>
                                         <div className="icon">
                                             <img className="regular-img" src={`/assets/img/icon/${service.icon}`} alt="Image Not Found" width={75} height={60} />
 
@@ -70,7 +70,7 @@ const ServicesV1 = ({ hasTitle, sectionClass }: DataType) => {
                                         <h4>
                                             <Link to={`/service-details/${service.id}`}>{service.title}</Link>
                                         </h4>
-                                        <p>{service.text}</p>
+                                        <p className="flex-grow-1">{service.text}</p>
                                         <Link className="btn-full" to={`/service-details/${service.id}`}>
                                             Lire plus <i className="fas fa-arrow-right" />
                                         </Link>

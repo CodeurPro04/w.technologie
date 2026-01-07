@@ -35,7 +35,6 @@ const Home3 = () => {
 
         <ClientsV1 sectionClass="bg-gray overflow-hidden blurry-shape-left" />
         
-        <TestimonialV3 />
         <FooterV3 />
         <DarkClass />
         {/* <ThemeDark /> */}
