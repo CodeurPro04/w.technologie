@@ -14,7 +14,7 @@ const HeaderV3 = () => {
     <>
       <header>
         <nav
-          className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed ${
+          className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed  ${
             isMenuSticky ? "sticked" : "no-background"
           } ${isOpen ? "navbar-responsive" : ""}`}
           style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}

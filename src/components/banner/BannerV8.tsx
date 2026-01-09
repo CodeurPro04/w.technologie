@@ -11,23 +11,35 @@ const BannerV8 = () => {
                 <div className="light-banner-active bg-gray bg-cover" style={{ backgroundImage: 'url(/assets/img/shape/4.jpg)' }} />
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-15">
+                        <div className="col-xl-15 banner_fist_part">
                             <div className="banner-style-eight-heading">
-                                <div className="banner-title">
+                                <div className="banner-title mt-80 mb-30">
 
-                                    <h2>
-                                        <SplitText
-                                            className="title-left split-text"
-                                            delay={150}
-                                            animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-                                            animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-                                            easing="easeOutCubic"
-                                            threshold={0.2}
-                                            rootMargin="-50px"
+                                    <div className="banner_text_container">
+                                        <svg 
+                                            style={{ position: 'absolute', top: '-40px', right: '-20px', width: '50px', overflow: 'visible' }} 
+                                            viewBox="0 0 50 50" 
+                                            fill="none" 
+                                            stroke="#ffffffff" 
+                                            strokeWidth="7" 
+                                            strokeLinecap="round"
                                         >
-                                            W.
-                                        </SplitText>
-                                    </h2>
+                                            <line x1="15" y1="35" x2="5" y2="20" />   {/* Trait gauche */}
+                                            <line x1="25" y1="30" x2="25" y2="10" />  {/* Trait milieu */}
+                                            <line x1="35" y1="35" x2="45" y2="20" />  {/* Trait droit */}
+                                        </svg>
+                                        <h2 className="mb-0">
+                                            <SplitText
+                                                className="title-left split-text banner_text_orange"
+                                                delay={150}
+                                                animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                                                animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                                                easing="easeOutCubic"
+                                            >
+                                                W.
+                                            </SplitText>
+                                        </h2>
+                                    </div>
 
                                     <h2 className="title-right split-text">
                                         <SplitText
@@ -38,23 +50,41 @@ const BannerV8 = () => {
                                             threshold={0.2}
                                             rootMargin="-50px"
                                         >
-                                            Technologie
+                                            Tech
                                         </SplitText>
                                     </h2>
 
                                 </div>
+                                <div className='banner_arrow'>
+                                    <img src="/assets/img/arrow-right.png" alt="arrow_right" className='arrow_right' />
+                                    <h2 className="title-right split-text">
+                                        <SplitText
+                                            delay={150}
+                                            animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                                            animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                                            easing="easeOutCubic"
+                                            threshold={0.2}
+                                            rootMargin="-50px"
+                                        >
+                                            Informatique
+                                        </SplitText>
+                                    </h2>
+                                </div>
                             </div>
+                            <div className='banner_right'>
+                                <img src="/assets/img/banner/index.webp" alt="index.webp" />
+                            </div>
+                        </div>
+                        <div className='banner_description'>
+                            <img src="/assets/img/banner/background.jpg" alt="background.jpg" className='rounded-circle'/>
+                            <p>W.Technologies est une entreprise innovante spécialisée dans les solutions technologiques avancées.</p>
                         </div>
                         
                     </div>
                     <div className="row">
                         <div className="col-xl-7">
                             <div className="d-grid">
-                                <h4>Informatique</h4>
                                 <div className="right">
-                                    <p>
-                                        W.Technologie est une entreprise innovante spécialisée dans les solutions technologiques avancées.
-                                    </p>
                                     <Link className="btn-animation mt-10" to="/about-us"><i className="fas fa-arrow-right" /> <span>En savoir plus</span></Link>
                                 </div>
                             </div>
