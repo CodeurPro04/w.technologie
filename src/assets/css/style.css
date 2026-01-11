@@ -9620,6 +9620,9 @@ a.btn-circle:hover strong {
 	overflow: hidden;
 	background: var(--bg-gray-secondary);
 	flex-grow: 1;
+	display: flex;
+    flex-direction: column;
+    justify-content: center; 
 }
 
 .bg-gray .team-style-one-item .info {
@@ -9649,6 +9652,7 @@ a.btn-circle:hover strong {
 .team-style-one-item .thumb {
 	position: relative;
 	z-index: 1;
+	flex-shrink: 0;
 }
 
 .team-style-one-item .thumb a>img {
