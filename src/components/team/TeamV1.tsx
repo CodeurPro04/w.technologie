@@ -142,7 +142,7 @@ const TeamV1 = ({ sectionClass, hasTitle }: DataType) => {
                 <div className="tab-pane fade" id="tab2">
                   <div className="row g-4"> 
                     {marketingTeam.map(member => (
-                      <div key={member.id} className="col-md-6 col-lg-4 d-flex align-items-stretch">
+                      <div key={member.id} className="col-md-6 col-lg-4 bloc d-flex align-items-stretch">
                         <div className="team-card-wrapper w-100 h-100">
                           <SingleTeamV1 team={member} /> 
                         </div>
@@ -173,7 +173,7 @@ const TeamV1 = ({ sectionClass, hasTitle }: DataType) => {
                 <div className="tab-pane fade" id="tab3">
                   <div className="row g-4 justify-content-center">
                     {developers.map(member => (
-                      <div key={member.id} className="col-md-6 col-lg-4 d-flex align-items-stretch">
+                      <div key={member.id} className="col-md-6 col-lg-4 bloc d-flex align-items-stretch">
                         <div className="team-card-wrapper w-100 h-100">
                           <SingleTeamV1 team={member} />
                         </div>
