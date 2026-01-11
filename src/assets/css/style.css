@@ -13511,6 +13511,13 @@ ul.list-disc li {
     gap: 140px;
 }
 
+@media (max-width: 1000px) {
+	.fun-fact-circle-lists{
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+}
+
 .fun-fact-circle-lists .fun-fact {
 	position: relative;
 	padding: 15px;
@@ -19866,8 +19873,18 @@ nav.navbar.validnavs .navbar-collapse.collapse.show img.light-img {
     flex-grow: 1 !important;
 }
 
-
 @media (max-width: 1405px) {
+    .banner-style-eight-heading h2{
+		font-size: 70px;
+	}
+
+	.arrow_right{
+		width: 90px;
+	}
+}
+
+
+@media (max-width: 1200px) {
     .banner_fist_part {
         display: flex;
         flex-direction: column-reverse; 
